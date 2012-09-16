@@ -1,0 +1,70 @@
+apngopt
+------------------------------------------
+
+Optimize APNG animated images
+
+Optimize APNG files by reducing their file size.
+
+The Animated Portable Network Graphics (APNG) file format is an
+extension to the Portable Network Graphics (PNG) specification. It
+allows for animated PNG files that work similarly to animated GIF
+files, while retaining backward compatibility with non-animated PNG
+files and adding support for 8-bit transparency and 24-bit images.
+
+Runtime requirements:
+  cygwin
+  zlib0
+
+Build requirements:
+  cygwin
+  zlib-devel
+
+Canonical homepage:
+  http://www.sourceforge.net/projects/apng
+  http://apng.sourceforge.net
+  http://packages.debian.org/unstable/apngopt
+
+Canonical download:
+  ftp://...  <ditto>
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Maintainer: Max Stepi <maxst@users.sourceforge.net>
+  Bugs: https://sourceforge.net/projects/apng/forums/forum/1391817
+
+License:
+  Custom: "As is" (zlib-libpng)
+
+Language:
+  C
+
+------------------------------------------
+
+Build instructions:
+  unpack apngopt-*-src.tar.bz2
+    if you use setup to install this source package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./apngopt*.sh all
+
+------------------------------------------
+
+Files included in the binary distribution:
+  See Cygwin package archive
+
+------------------------------------------
+
+Port Notes:
+
+----- version 1.1-1 -----
+- Initial release 2012-09-16 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2012 Jari Aalto; Licensed under GPL v2 or later
