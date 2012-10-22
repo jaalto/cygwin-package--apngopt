@@ -1,0 +1,56 @@
+From 7fe028ff0a71a1dfe69ab15126e039d37106ab57 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Mon, 22 Oct 2012 11:12:07 +0300
+Subject: [PATCH] apngopt.c: Add standard options -h, --help, -V, --version
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ apngopt.c |   26 +++++++++++++++++++++++---
+ 1 files changed, 23 insertions(+), 3 deletions(-)
+
+diff --git a/apngopt.c b/apngopt.c
+index a240478..c4ceb5b 100644
+--- a/apngopt.c
++++ b/apngopt.c
+@@ -2295,12 +2295,32 @@ int main(int argc, char** argv)
+   unsigned char  * pOut1 = NULL;
+   unsigned char  * pOut2 = NULL;
+   unsigned short * pDelays = NULL;
+-
+-  printf("\nAPNG Optimizer 1.1\n\n");
++  const char *version = "1.1";
++  const char *program = "APNG Optimizer";
++  const char *usage   = "Usage: apngopt anim.png [anim.opt.png]\n";
+ 
+   if (argc <= 1)
+   {
+-    printf("Usage: apngopt anim.png [anim.opt.png]\n");
++    fprintf(stderr, "Error, missing APNG input file. See -h\n");
++    return 1;
++  }
++
++  if ( !strcmp(argv[1], "-h") || !strcmp(argv[1], "--help") )
++  {
++    fprintf(stdout, "%s %s\n", program, version);
++    fprintf(stdout, usage);
++    return 0;
++  }
++
++  if ( !strcmp(argv[1], "-V") || !strcmp(argv[1], "--version") )
++  {
++    fprintf(stdout, "%s\n", version);
++    return 0;
++  }
++
++  if ( !strncmp(argv[1], "-", 1) )
++  {
++    fprintf(stderr, "Error, unknown option: %s\n", argv[1]);
+     return 1;
+   }
+ 
+-- 
+1.7.9
+

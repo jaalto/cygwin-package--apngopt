@@ -44,7 +44,7 @@ apngopt - optimize animated PNG image files
 
 =head1 SYNOPSIS
 
-  apngopt <INPUT *.gif> [<OUTPUT *.png>]
+  apngopt [options] INPUT-animated.png [OUTPUT-animated.png]
 
 =head1 DESCRIPTION
 
@@ -59,7 +59,13 @@ files and adding support for 8-bit transparency and 24-bit images.
 
 =head1 OPTIONS
 
-None.
+=item B<-h, --help>
+
+Display short help and exit.
+
+=item B<-V, --version>
+
+Display version and exit.
 
 =head1 ENVIRONMENT
 
